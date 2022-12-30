@@ -1,0 +1,9 @@
+.profile {
+  display: flex;
+  height: 100vh;
+
+  .profileInfo {
+    flex: 7;
+    background-color: rgb(15, 15, 15);
+  }
+}

@@ -7,7 +7,7 @@ import "./Home.scss";
 const Home = () => {
   return (
     <div className="home">
-      <LeftBar />
+      <LeftBar pageActive={"home"} />
       <Posts />
       <RightBar />
     </div>

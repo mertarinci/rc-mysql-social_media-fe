@@ -10,7 +10,7 @@ $primary-color: #00aaaa;
   .logo {
     font-size: 60px;
     color: $primary-color;
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -111,6 +111,31 @@ $primary-color: #00aaaa;
       }
       .tag {
         font-size: 14px;
+      }
+
+      .nonUser {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .link {
+          font-size: 16px;
+          font-weight: bold;
+
+          &:nth-child(1) {
+            color: lightblue;
+            &:hover {
+              color: white;
+            }
+          }
+          &:nth-child(2) {
+            color: rgb(247, 172, 172);
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
       }
     }
   }
