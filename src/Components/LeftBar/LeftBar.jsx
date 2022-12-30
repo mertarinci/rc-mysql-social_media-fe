@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LeftBar.scss";
 
 const LeftBar = ({}) => {
@@ -38,7 +39,9 @@ const LeftBar = ({}) => {
           <i class="fa-solid fa-ellipsis"></i>
           <span>More</span>
         </div>
-        <button>Meow!</button>
+        <a href="#write">
+          <button>Meow!</button>
+        </a>
       </div>
       <div className="bottom">
         <img

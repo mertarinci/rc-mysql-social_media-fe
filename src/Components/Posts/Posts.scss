@@ -1,4 +1,115 @@
 .posts {
   flex: 5;
   background-color: rgb(20, 20, 20);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .write {
+    height: 15rem;
+    padding: 10px 20px 0px 20px;
+
+    .container {
+      height: 100%;
+      width: 100%;
+      background-color: rgb(25, 25, 25);
+      border-radius: 10px;
+      .top {
+        height: 75%;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        border-bottom: 1px solid darkgray;
+        .left {
+          img {
+            width: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .middle {
+          width: 100%;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          textarea {
+            height: 80%;
+            width: 100%;
+            background-color: rgb(25, 25, 25);
+            color: white;
+            font-size: 20px;
+            border: none;
+            resize: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+          p {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+
+        .left {
+          .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: white;
+            gap: 30px;
+            cursor: pointer;
+
+            i {
+              &:hover {
+                color: #00aaaa;
+              }
+            }
+          }
+        }
+
+        .right {
+          button {
+            height: 2rem;
+            width: 8rem;
+            border-radius: 20px;
+            border: none;
+            background-color: #00aaaa;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+              color: #00aaaa;
+              background-color: white;
+            }
+
+            &:active {
+              background-color: #00aaaa;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+    padding: 50px;
+  }
 }

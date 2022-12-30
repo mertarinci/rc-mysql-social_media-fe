@@ -3,9 +3,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import LeftBar from './Components/LeftBar/LeftBar';
-import RightBar from './Components/RightBar/RightBar';
+
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 import SinglePost from './Pages/SinglePost/SinglePost';
 
 
@@ -18,6 +19,16 @@ const router = createBrowserRouter([
   {
     path: "/:userId/:postId",
     element: <SinglePost />
+  },
+
+  {
+    path: "/register",
+    element: <Register />
+  },
+
+  {
+    path: "/login",
+    element: <Login />
   }
 
 
