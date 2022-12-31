@@ -4,6 +4,7 @@ import "./Posts.scss";
 import axios from "axios";
 import { AuthContext } from "../../Context/AuthContext";
 import moment from "moment";
+import InputEmoji from "react-input-emoji";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -22,8 +23,6 @@ const Posts = () => {
     fetchData();
   }, []);
 
-  console.log(posts);
-
   const handleSubmit = async (e) => {
     if (text.length > 10) {
       try {
@@ -41,10 +40,20 @@ const Posts = () => {
         console.log(err);
       }
       setText("");
+      window.location.reload();
     } else {
       alert("10 harften fazlasini giriniz.");
     }
   };
+
+  // const displayEmojiPicker = () => {
+  //   const emoji = document.querySelector(".emoji").style;
+  //   if (emoji.visibility === "visible") {
+  //     emoji.visibility = "hidden";
+  //   } else {
+  //     emoji.visibility = "visible";
+  //   }
+  // };
 
   return (
     <div className="posts">
@@ -64,6 +73,7 @@ const Posts = () => {
               </div>
               <div className="middle">
                 <p>{currentUser.name}</p>
+
                 <textarea
                   type="text"
                   placeholder="Write here and share your meow to world!"
