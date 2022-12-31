@@ -57,33 +57,18 @@ const LeftBar = ({ pageActive }) => {
           <button>Meow!</button>
         </a>
       </div>
-      <div className="bottom">
-        {user ? (
+      {user && (
+        <div className="bottom">
           <img
             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
             alt=""
           />
-        ) : (
-          ""
-        )}
-        <div className="info">
-          {user ? (
-            <>
-              <span className="username">Mert A.</span>
-              <span className="tag">@mertarinci</span>
-            </>
-          ) : (
-            <div className="nonUser">
-              <Link to={"/login"} className="link">
-                Do you have account?
-              </Link>
-              <Link to={"/register"} className="link">
-                Want to register?
-              </Link>
-            </div>
-          )}
+          <div className="info">
+            <span className="username">Mert A.</span>
+            <span className="tag">@mertarinci</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

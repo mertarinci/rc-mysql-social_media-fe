@@ -44,6 +44,10 @@
             border: none;
             resize: none;
 
+            &::placeholder {
+              opacity: 0.4;
+            }
+
             &:focus {
               outline: none;
             }

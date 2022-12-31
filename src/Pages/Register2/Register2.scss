@@ -1,0 +1,99 @@
+.register2 {
+  background-color: rgb(193, 190, 255);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 60%;
+    height: 75%;
+    display: flex;
+    background-color: white;
+  }
+
+  .left {
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+      url("https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+        center;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+
+    h1 {
+      font-size: 100px;
+    }
+    button {
+      width: 50%;
+      padding: 15px;
+      border: none;
+      background-color: white;
+      color: rebeccapurple;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    h1 {
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      label {
+        width: 35%;
+        border: 1px solid #555;
+        padding: 5px;
+        color: #555;
+        border-radius: 20px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+          background-color: #555;
+          border: 1px solid white;
+        }
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid #938eef;
+        }
+      }
+
+      button {
+        width: 50%;
+        padding: 15px;
+        border: none;
+        background-color: #938eef;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}

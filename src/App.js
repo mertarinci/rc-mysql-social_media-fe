@@ -4,27 +4,24 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Profile from './Pages/Profile/Profile';
 import Register from './Pages/Register/Register';
+import Register2 from './Pages/Register2/Register2';
 import SinglePost from './Pages/SinglePost/SinglePost';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: < Home />
+    element: <Home />
   },
 
   {
     path: "/:userId/:postId",
     element: <SinglePost />
-  },
-
-  {
-    path: "/register",
-    element: <Register />
   },
 
   {
@@ -35,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />
+  },
+  {
+    path: "/register",
+    element: <Register2 />
   }
 
 

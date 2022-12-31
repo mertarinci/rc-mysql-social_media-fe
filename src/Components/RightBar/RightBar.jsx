@@ -16,33 +16,32 @@ const RightBar = () => {
         </div>
         <div className="topics">
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meos: 40000</span>
+            <h4>#Cat4Life</h4>
           </div>
 
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meos: 40000</span>
+            <h4>#WhyMyCatHatesMe</h4>
           </div>
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meos: 40000</span>
+            <h4>#OMGLookatMyCat</h4>
           </div>
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meos: 40000</span>
+            <h4>#Adorable</h4>
           </div>
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meos: 40000</span>
+            <h4>#IsMyCatIdiot</h4>
           </div>
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meows : 100</span>
+            <h4>#YOLOCatLife</h4>
           </div>
           <div className="item">
-            <h4>#Topicname</h4>
-            <span>Meows : 3000</span>
+            <h4>#DontMessWithCat</h4>
+          </div>
+          <div className="item">
+            <h4>#IShouldAvoidCats</h4>
+          </div>
+          <div className="item">
+            <h4>#HelloWorld</h4>
           </div>
         </div>
       </div>
