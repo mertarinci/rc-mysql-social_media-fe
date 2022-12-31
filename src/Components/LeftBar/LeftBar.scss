@@ -23,7 +23,7 @@ $primary-color: #00aaaa;
   .top {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 22px;
     padding: 60px 0px 80px 0px;
 
     button {
@@ -88,7 +88,7 @@ $primary-color: #00aaaa;
     display: flex;
     gap: 30px;
     border: 1px solid $primary-color;
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 20px;
     width: 80%;
     align-items: center;
@@ -104,6 +104,30 @@ $primary-color: #00aaaa;
       flex-direction: column;
       color: white;
       gap: 5px;
+      position: relative;
+      height: 3rem;
+
+      button {
+        border: none;
+        background-color: #00aaaa;
+        color: white;
+        border-radius: 20px;
+        height: 1.2rem;
+        width: 4rem;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        left: 90px;
+
+        &:hover {
+          color: #00aaaa;
+          background-color: white;
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
 
       .username {
         font-weight: bold;

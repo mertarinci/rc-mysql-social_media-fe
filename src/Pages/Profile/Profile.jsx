@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LeftBar from "../../Components/LeftBar/LeftBar";
 import "./Profile.scss";
 
 const Profile = () => {
+  useEffect(() => {
+    const changeTitle = () => {
+      document.title = "kittyfeed / Profile";
+    };
+    changeTitle();
+  }, []);
+
   return (
     <div className="profile">
       <LeftBar pageActive={"profile"} />

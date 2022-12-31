@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Post from "../Post/Post";
 import "./Posts.scss";
 import axios from "axios";
+import { AuthContext } from "../../Context/AuthContext";
+import moment from "moment";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
+  const { currentUser } = useContext(AuthContext);
+  const [text, setText] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,46 +22,78 @@ const Posts = () => {
     fetchData();
   }, []);
 
+  console.log(posts);
+
+  const handleSubmit = async (e) => {
+    if (text.length > 10) {
+      try {
+        await axios.post(
+          "http://localhost:8080/api/posts/new",
+          {
+            text: text,
+            date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
+          },
+          {
+            withCredentials: true,
+          }
+        );
+      } catch (err) {
+        console.log(err);
+      }
+      setText("");
+    } else {
+      alert("10 harften fazlasini giriniz.");
+    }
+  };
+
   return (
     <div className="posts">
-      <div id="write" className="write">
-        <div className="container">
-          <div className="top">
-            <div className="left">
-              <img
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-                alt=""
-              />
-            </div>
-            <div className="middle">
-              <p>Mert Arinci</p>
-              <textarea
-                type="text"
-                placeholder="Write here and share your meow to world!"
-                maxLength={250}
-              />
-            </div>
-          </div>
-          <div className="bottom">
-            <div className="left">
-              <div className="links">
-                <i class="fa-solid fa-image"></i>
-                <i class="fa-solid fa-list"></i>
-                <i class="fa-regular fa-face-smile"></i>
-                <i class="fa-solid fa-location-dot"></i>
+      {currentUser && (
+        <div id="write" className="write">
+          <div className="container">
+            <div className="top">
+              <div className="left">
+                <img
+                  src={
+                    currentUser.profile_img
+                      ? `/images/${currentUser.profile_img}`
+                      : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+                  }
+                  alt=""
+                />
+              </div>
+              <div className="middle">
+                <p>{currentUser.name}</p>
+                <textarea
+                  type="text"
+                  placeholder="Write here and share your meow to world!"
+                  maxLength={250}
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                />
               </div>
             </div>
-            <div className="right">
-              <button>Meow!</button>
+            <div className="bottom">
+              <div className="left">
+                <div className="links">
+                  <i className="fa-solid fa-image"></i>
+                  <i className="fa-solid fa-list"></i>
+                  <i className="fa-regular fa-face-smile"></i>
+                  <i className="fa-solid fa-location-dot"></i>
+                </div>
+              </div>
+              <div className="right">
+                <span>{text.length}/300</span>
+                <button onClick={handleSubmit}>Meow!</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
+
       <div className="posts">
         {posts?.map((p, index) => (
-          <>
-            <Post data={p} />
-          </>
+          <Post data={p} key={index} />
         ))}
       </div>
     </div>

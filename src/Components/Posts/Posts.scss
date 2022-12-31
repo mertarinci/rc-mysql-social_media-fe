@@ -25,6 +25,7 @@
         .left {
           img {
             width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
           }
@@ -83,6 +84,14 @@
         }
 
         .right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          span {
+            color: white;
+          }
           button {
             height: 2rem;
             width: 8rem;
@@ -114,6 +123,6 @@
     flex-direction: column-reverse;
     align-items: center;
     gap: 10px;
-    padding: 50px;
+    padding: 10px 20px;
   }
 }

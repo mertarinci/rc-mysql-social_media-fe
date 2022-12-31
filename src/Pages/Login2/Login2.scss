@@ -1,7 +1,8 @@
-.register2 {
+.login2 {
   background-color: rgb(25, 25, 25);
   height: 100vh;
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -10,6 +11,7 @@
     height: 75%;
     display: flex;
     background-color: rgb(35, 35, 35);
+    flex-direction: row-reverse;
   }
 
   .left {
@@ -22,14 +24,14 @@
       url("https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
         center;
     background-size: cover;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: white;
 
     h1 {
-      font-size: 100px;
+      font-size: 90px;
     }
     button {
       width: 50%;
@@ -48,7 +50,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 100px;
 
     h1 {
       color: white;
@@ -57,31 +59,15 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-
-      label {
-        width: 35%;
-        border: 1px solid #555;
-        padding: 5px;
-        color: white;
-        border-radius: 20px;
-        text-align: center;
-        cursor: pointer;
-
-        &:hover {
-          color: white;
-          background-color: #555;
-          border: 1px solid white;
-        }
-      }
+      gap: 40px;
 
       input {
+        background-color: rgb(35, 35, 35);
+        color: white;
         border: none;
         border-bottom: 1px solid lightgray;
         padding: 20px 10px;
-        font-size: 14px;
-        background-color: rgb(35, 35, 35);
-        color: white;
+        font-size: 16px;
 
         &:focus {
           outline: none;
@@ -90,11 +76,11 @@
       }
 
       button {
+        align-self: center;
         width: 50%;
         padding: 15px;
         border: none;
         background-color: #00aaaa;
-
         color: white;
         font-weight: bold;
         font-size: 16px;

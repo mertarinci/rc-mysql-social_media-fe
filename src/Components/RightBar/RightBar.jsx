@@ -7,12 +7,12 @@ const RightBar = () => {
       <div className="search">
         <input type="text" placeholder="Search on kittyfeed" />
 
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <div className="trends">
         <div className="header">
           <h3>Trending Topics</h3>
-          <i class="fa-solid fa-arrow-trend-up"></i>
+          <i className="fa-solid fa-arrow-trend-up"></i>
         </div>
         <div className="topics">
           <div className="item">
@@ -47,17 +47,17 @@ const RightBar = () => {
       </div>
       <div className="help">
         <div className="head">
-          <i class="fa-regular fa-circle-question"></i>
+          <i className="fa-regular fa-circle-question"></i>
           <h3>Do you need help?</h3>
         </div>
         <div className="info">
           <p>You can always reach us.</p>
         </div>
         <div className="links">
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-youtube"></i>
+          <i className="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-github"></i>
+          <i className="fa-brands fa-linkedin"></i>
         </div>
       </div>
     </div>
